@@ -5,6 +5,14 @@ import numpy as np
 import matplotlib.pyplot as plt 
 
 
+def plot_profile(x, cake, color="r"):
+    plt.figure()
+    plt.plot(x, cake, color)
+    plt.xlabel("x")
+    plt.ylabel("cake")
+    plt.title("cake profile")
+
+
 D = 100
 Lx = 300
 dx = 0.5
@@ -23,11 +31,7 @@ C[x<=Lx/2]=C_left
 C[x>Lx/2]=C_right
 
 
-plt.figure()
-plt.plot(x, C, "r")
-plt.xlabel("x")
-plt.ylabel("C")
-plt.title("Initial profile")
+plot_profile(x, C)
 
 
 nt = 5000
@@ -46,9 +50,6 @@ z[:-2]
 z[2:]
 
 
-plt.figure()
-plt.plot(x, C, "r")
-plt.xlabel("x")
-plt.ylabel("C")
-plt.title("Initial profile")
+plot_profile(x, C, color="b")
+
 
