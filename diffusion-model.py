@@ -28,6 +28,7 @@
 
 # In[ ]:
 
+"""A 1D diffusion model."""
 
 import numpy as np
 import matplotlib.pyplot as plt 
